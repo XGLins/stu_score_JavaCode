@@ -7,9 +7,7 @@ import com.changjiang.score.common.Result;
 import com.changjiang.score.score.entity.ScTeacher;
 import com.changjiang.score.score.service.IScTeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/score/scTeacher")
@@ -21,13 +19,20 @@ public class ScTeacherController {
 
     @GetMapping("list")
     public Result<Page<ScTeacher>> list(Page<ScTeacher> page,ScTeacher scTeacher) {
-//        System.out.println(page.getSize());
-//        System.out.println(scTeacher);
+        System.out.println(page.getSize());
+        System.out.println(scTeacher);
         QueryWrapper<ScTeacher> query = Wrappers.query(scTeacher);
 
         Page<ScTeacher> pageRes = scTeacherService.page(page, query);
         System.out.println("查询结果" + pageRes.getRecords());
         return Result.ok(pageRes);
+//        return Result.ok();
+    }
+
+    @PostMapping("insert")
+    public Result<String> insert(@RequestBody ScTeacher scTeacher){
+        scTeacherService.save(scTeacher);
+        return Result.ok();
     }
 
 }

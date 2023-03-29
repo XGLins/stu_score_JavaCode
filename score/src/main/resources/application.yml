@@ -1,3 +1,5 @@
+#  a同学学到了那一部分：分页组件、后端接口（一个组一个学习报告、一个工程）
+
 server:
   port: 8081
 #  servlet:
@@ -27,3 +29,4 @@ mybatis-plus:
 #spring.servlet.multipart.max-request-size=200MB
 file:
   dirs: D:\\tempUpload\\
+

@@ -16,6 +16,9 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @ToString
 @TableName("sc_teacher")
+/**
+ * 教师-实体类
+ * */
 public class ScTeacher {
 
     private static final long serialVersionUID = 1L;
