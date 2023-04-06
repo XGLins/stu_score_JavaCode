@@ -1,4 +1,7 @@
 package com.changjiang.score.score.mapper;
 
-public interface ScClassMapper {
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.changjiang.score.score.entity.ScClass;
+
+public interface ScClassMapper extends BaseMapper<ScClass> {
 }

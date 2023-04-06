@@ -1,4 +1,7 @@
 package com.changjiang.score.score.service;
 
-public interface IScClassService {
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.changjiang.score.score.entity.ScClass;
+
+public interface IScClassService extends IService<ScClass> {
 }
